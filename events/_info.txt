@@ -1,0 +1,11 @@
+Creating new Discord event files:
+1. Create <event>.js
+2. Use the following template:
+
+exports.run = async (client, data) => {
+
+    console.log('This runs whenever the event is triggered!');
+
+}
+
+3. Done!

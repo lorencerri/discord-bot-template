@@ -1,0 +1,5 @@
+Creating new commands:
+1. Create <commandInLowercase>.js
+2. Copy the ping.js and place it in your new command
+3. Rename everything titled 'Ping' to your new command
+4. Your new code will go inside the exec method
