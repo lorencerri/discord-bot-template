@@ -4,7 +4,7 @@ exports.run = (client, message) => {
     if (!message.content.startsWith(client.prefix)) return;
     
     // Declare & Initialize Variables
-    const args = message.content.slice(1).trim().split(/ +/g);
+    const args = message.content.slice(this.prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
 
     // Return Statements
