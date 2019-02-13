@@ -13,14 +13,14 @@ require('./User');
 require('./TextChannel');
 
 class Base extends Discord.Client {
-    constructor(...args) {
+    constructor(options, ...args) {
         super(...args);
         this.commands = new Discord.Collection();
         this.aliases = new Discord.Collection();
         this.CommandHandler = new (require('./CommandHandler'))(this);
         this.EventHandler = new (require('./EventHandler'))(this);
         this.db = db;
-        this.prefix = '!';
+        this.prefix = options.prefix;
     }
     
     run() {

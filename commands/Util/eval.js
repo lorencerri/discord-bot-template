@@ -1,6 +1,5 @@
 const Command = require('../../structures/Command');
-const hastebin = require('hastebin-gen');
-const Discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 class Eval extends Command {
     constructor(client) {
@@ -26,7 +25,7 @@ class Eval extends Command {
         
         if (message.author.id !== '144645791145918464') {
 
-        const embed = new Discord.MessageEmbed()
+        const embed = new MessageEmbed()
             .setFooter('Sorry, you don\'t have access to this command.')
             .setColor(0xffffff)
 
@@ -38,7 +37,7 @@ class Eval extends Command {
         message.channel.send(embed);
     }
 
-    const evalEmbed = new Discord.MessageEmbed().setColor(0xffffff)
+    const evalEmbed = new MessageEmbed().setColor(0xffffff)
     const code = args.join(' ');
     try {
         const evaled = this.clean(await eval(code));
@@ -49,7 +48,7 @@ class Eval extends Command {
         if (evaled.length < 800) { send(evalEmbed) }
         else {
             let url = await this.client.hastebin(evaled, "js").catch(err => console.log(err.stack));
-            const newEmbed = new Discord.MessageEmbed()
+            const newEmbed = new MessageEmbed()
                 .addField('📥 Input', `\`\`\`\n${code}\n\`\`\``)
                 .addField('📤 Output', `\n**[${url}](${url})**`)
                 .setColor('0x42f468');
