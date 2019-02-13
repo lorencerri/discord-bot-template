@@ -2,7 +2,6 @@ const {
     Structures,
     MessageEmbed
 } = require('discord.js');
-const icons = require('../res/icons.json');
 
 Structures.extend('Guild', Guild => {
     class GuildExt extends Guild {

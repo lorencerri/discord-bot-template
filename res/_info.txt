@@ -1,4 +1,0 @@
-Icons.json:
-
-- Used for quick.hook (https://www.npmjs.com/package/quick.hook), example in ping.js.
-You can try to switch the icon in the ping command to learn more!

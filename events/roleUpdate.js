@@ -1,5 +1,3 @@
-exports.run = async (client, oldRole, role) => {
+exports.run = async (client, oldRole, newRole) => {
 
-    console.log('Role Updated!');
-    
 }
