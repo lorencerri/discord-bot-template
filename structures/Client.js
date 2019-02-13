@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const Hook = require('quick.hook');
 const db = require('quick.db');
 
 require('./CategoryChannel');
@@ -18,7 +17,6 @@ class Base extends Discord.Client {
         this.aliases = new Discord.Collection();
         this.CommandHandler = new (require('./CommandHandler'))(this);
         this.EventHandler = new (require('./EventHandler'))(this);
-        this.hook = Hook;
         this.db = db;
         this.prefix = '!';
     }

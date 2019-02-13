@@ -1,5 +1,4 @@
 const Command = require('../../structures/Command');
-const { pingIcon, pingIconColor } = require('../../res/icons.json');
 const { MessageEmbed } = require('discord.js');
 
 class Ping extends Command {
@@ -14,13 +13,10 @@ class Ping extends Command {
     exec(message) {
         
         const embed = new MessageEmbed()
-            .setColor(pingIconColor)
+            .setColor(0xffffff)
             .setFooter(`Pong! API: ${Math.floor(this.client.ping)}`);
 
-        return message.channel.hook(embed, {
-            name: 'Ping 🏓',
-            icon: pingIcon
-        });
+        return message.channel.send(embed);
         
     }
     
