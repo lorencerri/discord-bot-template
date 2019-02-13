@@ -1,8 +1,8 @@
 const Client = require('./structures/Client');
 
-// Options
+// ----- Options -----
 // Feel free to change
-// any of these values:
+// any of these values
 let options = {
   prefix: '?'
 }

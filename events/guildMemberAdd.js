@@ -1,3 +1,3 @@
-exports.run = (member) => {
- 
+exports.run = (client, member) => {
+  
 }
