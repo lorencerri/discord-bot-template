@@ -3,7 +3,8 @@ const { Structures } = require('discord.js');
 Structures.extend('TextChannel', TextChannel => {
    class TextChannelExt extends TextChannel {
        constructor(...args) {
-           super(...args);    
+        super(...args);    
+        
        }
        
        hook(message, args) {

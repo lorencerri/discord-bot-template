@@ -19,7 +19,7 @@ class CommandHandler {
         this.client.aliases.set(r, command);
       });
       this.client.commands.set(command.name, command);
-      console.log('[Loaded Command]', command.name);
+      console.log('[Loaded Command]', command.name)
       next();
     });
   }
