@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
-const db = require('quick.db');
+const fetch = require('node-fetch');
+const Enmap = require('enmap');
+const db = new Enmap({ name: 'data' });
 
 require('./CategoryChannel');
 require('./Guild');
@@ -33,6 +35,15 @@ class Base extends Discord.Client {
     
     capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+  
+    hastebin(input, extension) {
+      return new Promise(function (res, rej) {
+          if (!input) rej("[Error] Missing Input");
+          fetch.post("https://hasteb.in/documents").send(input).then(body => {
+              res("https://hasteb.in/" + body.body.key + ((extension) ? "." + extension : ""));
+          }).catch(e => rej(e));
+      })
     }
     
 }

@@ -48,7 +48,7 @@ class Eval extends Command {
         evalEmbed.setColor('0x42f468')
         if (evaled.length < 800) { send(evalEmbed) }
         else {
-            let url = await hastebin(evaled, "js").catch(err => console.log(err.stack));
+            let url = await this.client.hastebin(evaled, "js").catch(err => console.log(err.stack));
             const newEmbed = new Discord.MessageEmbed()
                 .addField('📥 Input', `\`\`\`\n${code}\n\`\`\``)
                 .addField('📤 Output', `\n**[${url}](${url})**`)
