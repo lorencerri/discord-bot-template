@@ -40,8 +40,10 @@ class Base extends Discord.Client {
     hastebin(input, extension) {
       return new Promise(function (res, rej) {
           if (!input) rej("[Error] Missing Input");
-          fetch.post("https://hasteb.in/documents").send(input).then(body => {
-              res("https://hasteb.in/" + body.body.key + ((extension) ? "." + extension : ""));
+          fetch("https://hasteb.in/documents", { method: 'POST', body: input })
+              .then(res => res.json())
+              .then(body => {
+                  res("https://hasteb.in/" + body.key + ((extension) ? "." + extension : ""));
           }).catch(e => rej(e));
       })
     }
