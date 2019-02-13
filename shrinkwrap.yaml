@@ -194,6 +194,7 @@ packages:
     dev: false
     name: prism-media
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/amishshah/prism-media/tar.gz/de5e60a08c14107d04b5db1f285fa1333f93e1d4'
     version: 0.3.1
   github.com/discordjs/discord.js/5c3f5d704840fca3888264e19eb38d88977304ea:
@@ -217,6 +218,7 @@ packages:
       sodium: ^3.0.2
       zlib-sync: ^0.1.4
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/discordjs/discord.js/tar.gz/5c3f5d704840fca3888264e19eb38d88977304ea'
     version: 12.0.0-dev
 registry: 'https://registry.npmjs.org/'
