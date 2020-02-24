@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 const fetch = require('node-fetch');
-const Enmap = require('enmap');
-const db = new Enmap({ name: 'data' });
 
 require('./CategoryChannel');
 require('./Guild');
@@ -19,7 +17,6 @@ class Base extends Discord.Client {
         this.aliases = new Discord.Collection();
         this.CommandHandler = new (require('./CommandHandler'))(this);
         this.EventHandler = new (require('./EventHandler'))(this);
-        this.db = db;
         this.prefix = options.prefix;
     }
     
