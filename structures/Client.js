@@ -27,16 +27,7 @@ class Base extends Discord.Client {
         this.CommandHandler.load();
         this.EventHandler.load();
     }
-    
-    get dateToHour() {
-        let d = new Date();
-        return new Date().toJSON().substring(0, 13);
-    }
-    
-    capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-  
+
     hastebin(input, extension) {
       return new Promise(function (res, rej) {
           if (!input) rej("[Error] Missing Input");

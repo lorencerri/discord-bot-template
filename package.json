@@ -1,5 +1,5 @@
 {
-  "name": "bot-template",
+  "name": "discord-bot-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,8 +12,6 @@
   "dependencies": {
     "discord.js": "github:discordjs/discord.js",
     "walk": "^2.3.14",
-    "enmap": "^4.7.1",
-    "better-sqlite-pool": "^0.2.0",
     "node-fetch": "^2.3.0"
   }
 }

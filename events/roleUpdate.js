@@ -1,3 +1,3 @@
-exports.run = async (client, oldRole, newRole) => {
+exports.run = (client, oldRole, newRole) => {
 
 }

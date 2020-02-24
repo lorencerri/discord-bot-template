@@ -1,3 +1,3 @@
-exports.run = async (client, messages) => {
+exports.run = (client, messages) => {
 
 }
