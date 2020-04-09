@@ -109,3 +109,4 @@ json.sqlite
 # Other
 package-lock.json
 .vs/
+*.sqlite
