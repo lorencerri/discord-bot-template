@@ -1,14 +1,14 @@
-const { Command } = require('discord-akairo');
+const {
+    Command
+} = require('discord-akairo');
 
 class PrefixCommand extends Command {
     constructor() {
         super('prefix', {
             aliases: ['prefix'],
-            args: [
-                {
-                    id: 'prefix'
-                }
-            ],
+            args: [{
+                id: 'prefix'
+            }],
             channel: 'guild'
         });
     }

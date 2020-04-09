@@ -1,4 +1,6 @@
-const { Listener } = require('discord-akairo');
+const {
+    Listener
+} = require('discord-akairo');
 
 module.exports = class ChannelDeleteListener extends Listener {
     constructor() {

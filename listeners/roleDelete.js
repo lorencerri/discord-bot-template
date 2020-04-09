@@ -1,4 +1,6 @@
-const { Listener } = require('discord-akairo');
+const {
+    Listener
+} = require('discord-akairo');
 
 module.exports = class RoleDeleteListener extends Listener {
     constructor() {

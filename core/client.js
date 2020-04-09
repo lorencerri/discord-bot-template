@@ -1,6 +1,13 @@
 const path = require('path');
-const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
-const { ownerID, defaultPrefix } = require('../config.js');
+const {
+    AkairoClient,
+    CommandHandler,
+    ListenerHandler
+} = require('discord-akairo');
+const {
+    ownerID,
+    defaultPrefix
+} = require('../config.js');
 const db = require('quick.db');
 const Utils = require('./utils.js');
 
@@ -9,7 +16,11 @@ require('../structures/GuildMember.js');
 
 module.exports = class GuardianClient extends AkairoClient {
     constructor() {
-        super({ ownerID }, { disableEveryone: true })
+        super({
+            ownerID
+        }, {
+            disableEveryone: true
+        })
 
         this.commandHandler = new CommandHandler(this, {
             directory: path.join(__dirname, '..', 'commands/'),
