@@ -1,25 +1,16 @@
-const Command = require('../../structures/Command');
-const { MessageEmbed } = require('discord.js');
+const { Command } = require('discord-akairo');
 
-class Ping extends Command {
-    constructor(client) {
-        super({
-            name: 'ping'
+class PingCommand extends Command {
+    constructor() {
+        super('ping', {
+            aliases: ['ping']
         });
-        
-        this.client = client;
     }
-    
-    exec(message) {
-        
-        const embed = new MessageEmbed()
-            .setColor(0xffffff)
-            .setFooter(`Pong! API: ${Math.floor(this.client.ping)}`);
 
-        return message.channel.send(embed);
-        
+    async exec(message) {
+        const sent = await message.channel.send('Calculating...');
+        return sent.edit(`Latency: **\`${sent.createdTimestamp - message.createdTimestamp}ms\`**`);
     }
-    
 }
 
-module.exports = Ping;
+module.exports = PingCommand;

@@ -1,6 +1,5 @@
 const {
-    Structures,
-    MessageEmbed
+    Structures
 } = require('discord.js');
 
 Structures.extend('Guild', Guild => {
@@ -9,19 +8,29 @@ Structures.extend('Guild', Guild => {
             super(...args);
         }
 
-        get memberSize() {
-            return this.memberCount.toLocaleString();
+        // Returns the Guild prefix
+        // <Guild>.prefix
+        get prefix() {
+            return this.get('prefix', defaultPrefix);
         }
 
-        /* Parses a given ID */
-        parseID(ID) {
-            if (!ID) return { type: 'none', data: null };
-            else if (this.channels.has(ID)) return { type: 'channel', data: this.channels.get(ID) };
-            else if (this.members.has(ID)) return { type: 'member', data: this.members.get(ID) };
-            else if (this.roles.has(ID)) return { type: 'role', data: this.roles.get(ID) };
-            else return { type: 'none', data: null };
+        // The following methods are all namespaced by Guild ID.
+        // Examples:
+        // <Guild>.get('loggingChannelID', [fallback]);
+        // <Guild>.set('loggingChannelID', '383430486506340352')
+        get(key, fallback) {
+            return this.client.db.get(`${this.id}_${key}`) || fallback;
+        }
+
+        set(key, data) {
+            return this.client.db.set(`${this.id}_${key}`, data);
+        }
+
+        delete(key) {
+            return this.client.db.delete(`${this.id}_${key}`);
         }
 
     }
+
     return GuildExt;
 });

@@ -1,13 +1,4 @@
-const Client = require('./structures/Client');
+const GuardianClient = require('./core/client.js');
+const client = new GuardianClient();
 
-/* Global Options */
-let options = {
-  prefix: '?'
-}
-
-const client = new Client(options);
-client.run();
-
-// Your BOT token obtained from 
-// https://discordapp.com/developers/applications/
-client.login('TOKEN');
+client.login('NjkwNjQ4ODk5MzM3MTkxNDk2.Xo9k2Q.T7wJH5mk1BNfCOGRLfZ7el8Ln1M');
