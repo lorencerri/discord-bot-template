@@ -110,3 +110,4 @@ json.sqlite
 package-lock.json
 .vs/
 *.sqlite
+yarn.lock

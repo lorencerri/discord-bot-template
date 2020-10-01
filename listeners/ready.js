@@ -1,6 +1,4 @@
-const {
-    Listener
-} = require('discord-akairo');
+const { Listener } = require('discord-akairo');
 
 module.exports = class ReadyListener extends Listener {
     constructor() {
@@ -13,4 +11,4 @@ module.exports = class ReadyListener extends Listener {
     exec() {
         console.log(`${this.client.user.tag} is now ready!`);
     }
-}
+};

@@ -1,6 +1,4 @@
-const {
-    Structures
-} = require('discord.js');
+const { Structures } = require('discord.js');
 
 Structures.extend('Guild', Guild => {
     class GuildExt extends Guild {
@@ -29,7 +27,6 @@ Structures.extend('Guild', Guild => {
         delete(key) {
             return this.client.db.delete(`${this.id}_${key}`);
         }
-
     }
 
     return GuildExt;

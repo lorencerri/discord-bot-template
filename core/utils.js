@@ -11,9 +11,8 @@ module.exports = class Utils {
     // <Client>.Utils.staticObject;
     get staticObject() {
         return {
-            'Hello': 'World',
-            'One': 2
-        }
+            Hello: 'World',
+            One: 2
+        };
     }
-
-}
+};
