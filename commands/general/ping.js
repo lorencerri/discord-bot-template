@@ -1,6 +1,4 @@
-const {
-    Command
-} = require('discord-akairo');
+const { Command } = require('discord-akairo');
 
 class PingCommand extends Command {
     constructor() {
@@ -11,7 +9,11 @@ class PingCommand extends Command {
 
     async exec(message) {
         const sent = await message.channel.send('Calculating...');
-        return sent.edit(`Latency: **\`${sent.createdTimestamp - message.createdTimestamp}ms\`**`);
+        return sent.edit(
+            `Latency: **\`${
+                sent.createdTimestamp - message.createdTimestamp
+            }ms\`**`
+        );
     }
 }
 

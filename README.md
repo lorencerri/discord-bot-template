@@ -1,6 +1,6 @@
 **Discord-Bot-Template**
 
-*This is a WIP starter template for Discord bots built on **discord-akairo**.*
+_This is a WIP starter template for Discord bots built on **discord-akairo**._
 
 [discord.gg/plexidev](https://discord.gg/plexidev)
 

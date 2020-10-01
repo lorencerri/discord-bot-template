@@ -1,6 +1,4 @@
-const {
-    Listener
-} = require('discord-akairo');
+const { Listener } = require('discord-akairo');
 
 module.exports = class RoleCreateListener extends Listener {
     constructor() {
@@ -11,6 +9,8 @@ module.exports = class RoleCreateListener extends Listener {
     }
 
     async exec(role) {
-        console.log(`The role ${role.name} has been created in ${role.guild.name}`);
+        console.log(
+            `The role ${role.name} has been created in ${role.guild.name}`
+        );
     }
-}
+};

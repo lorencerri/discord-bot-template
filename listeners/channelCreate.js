@@ -1,6 +1,4 @@
-const {
-    Listener
-} = require('discord-akairo');
+const { Listener } = require('discord-akairo');
 
 module.exports = class ChannelCreateListener extends Listener {
     constructor() {
@@ -11,6 +9,8 @@ module.exports = class ChannelCreateListener extends Listener {
     }
 
     async exec(channel) {
-        console.log(`The channel ${channel.name} has been created in ${channel.guild.name}`);
+        console.log(
+            `The channel ${channel.name} has been created in ${channel.guild.name}`
+        );
     }
-}
+};

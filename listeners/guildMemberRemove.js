@@ -1,6 +1,4 @@
-const {
-    Listener
-} = require('discord-akairo');
+const { Listener } = require('discord-akairo');
 
 module.exports = class GuildMemberRemoveListener extends Listener {
     constructor() {
@@ -11,6 +9,8 @@ module.exports = class GuildMemberRemoveListener extends Listener {
     }
 
     async exec(member) {
-        console.log(`${member.user.tag} has been unbanned in ${member.guild.name}`);
+        console.log(
+            `${member.user.tag} has been unbanned in ${member.guild.name}`
+        );
     }
-}
+};
