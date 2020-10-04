@@ -22,8 +22,8 @@ Create a `.env` file & place your token under a property titled 'TOKEN' to run.
 
 **To create a new Discord bot process:** 
 Visit Discords Developer Portal: https://discordapp.com/developers/applications/
-    Click "New Application"
-  Enter in your applications name
-   Click on "Bot"
-  Then make your application into a bot process.
+Click "New Application"
+Enter in your applications name
+ Click on "Bot"
+Then make your application into a bot process.
   This will allow you to obtain your Discord Bots Token.
