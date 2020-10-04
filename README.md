@@ -20,6 +20,30 @@ Create a `.env` file & place your token under a property titled 'TOKEN' to run.
 
 ---
 
+Current commands of which are supported within this template: 
+`Info`, `Eval`, `Ping`, `Prefix`
+
+Ability to add more commands by following this basic template:
+```
+const { Command } = require('discord-akairo');
+
+class COMMANDNAME extends Command {
+    constructor() {
+        super('COMMANDNAME', {
+            aliases: ['COMMANDALIASES']
+        });
+    }
+
+    async exec(message) {
+        // Code
+    }
+}
+
+module.exports = COMMANDNAME;
+```
+
+---
+
 **To create a new Discord bot process:**
  
 Visit Discords Developer Portal: https://discordapp.com/developers/applications/
