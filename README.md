@@ -41,7 +41,7 @@ class COMMANDNAME extends Command {
 
 module.exports = COMMANDNAME;
 ```
-
+ 
 ---
 
 **To create a new Discord bot process:**
