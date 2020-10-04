@@ -17,3 +17,5 @@ More information on discord-akairo's database handling can be found [here](https
 ---
 
 Create a `.env` file & place your token under a property titled 'TOKEN' to run.
+
+---
