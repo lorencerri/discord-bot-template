@@ -31,12 +31,6 @@ module.exports = class GuardianClient extends AkairoClient {
         this.listenerHandler = new ListenerHandler(this, {
             directory: path.join(__dirname, '..', 'listeners/')
         });
-
-        this.urls = {
-            github: "https://github.com/plexidev/discord-bot-template",
-            server: "https://discord.gg/plexidev",
-            me: "https://discord.com/api/oauth2/authorize?client_id=CLIENTID&permissions=8&scope=bot"
-        }
         
         this.db = db;
         this.Utils = new Utils(this);
