@@ -8,7 +8,13 @@ class InfoCommand extends Command {
     }
 
     async exec(message) {
-        return message.channel.send(`From here you can\n  •  Invite me to your server [here](${this.client.urls.me})\n  •  Join my support server [here](${this.client.urls.server})\n  •  My documentation [here](${this.client.urls.github})`);
+        const embed = this.client.util
+            .embed()
+            .setColor(0x7289da)
+            .setTitle('Information')
+            .setDescription(`  •  Current Prefix: `${message.guild.prefix}`\n  •  Invite me to your server [here](https://discord.com/oauth2/authorize?client_id=${this.client.id}&scope=bot)`);
+        
+        return message.channel.send();
     }
 }
 
