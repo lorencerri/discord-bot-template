@@ -14,7 +14,11 @@ More information on discord-akairo's database handling can be found [here](https
 
 ## Getting Started
 
-Create a `.env` file & place your token under a property titled 'TOKEN' to run.
+1. Clone/Download this repo
+2. Install the packages using npm/yarn
+3. Create a `.env` file & place your token under a property titled 'TOKEN' to run.
+4. Modify the prefix and ownerID in config.json
+5. Run the bot
 
 ## Default Commands
 
@@ -41,8 +45,6 @@ module.exports = COMMANDNAME;
 ```
 
 ## Creating a Discord Bot
-
-**To create a new Discord bot process:**
  
 Visit Discords Developer Portal: https://discordapp.com/developers/applications/
 Click "New Application", 
