@@ -1,8 +1,6 @@
 ## discord-bot-template
 
-_This is a WIP starter template for Discord bots built on **discord-akairo**._
-
-[discord.gg/plexidev](https://discord.gg/plexidev)
+A WIP starter template for Discord bots built on a **discord-akario**. Dependencies are most likely out of date due to lack of maintenance.
 
 ## Database
 
