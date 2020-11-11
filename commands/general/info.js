@@ -8,11 +8,20 @@ class InfoCommand extends Command {
     }
 
     async exec(message) {
+        const lines = [
+            `Current Prefix: \`${message.guild.prefix}\``,
+            `Commands Loaded: \`${this.client.commandHandler.modules.size}\``,
+            `Command Aliases: \`${this.client.commandHandler.aliases.size}\``,
+            `Guilds: \`${this.client.guilds.cache.size}\``,
+            `Users: \`${this.client.guilds.cache.reduce((c, v) => c + v.memberCount, 0)}\``,
+            `Server Invite: [Link](https://discord.com/oauth2/authorize?client_id=${this.client.id}&scope=bot)`
+        ]
+        
         const embed = this.client.util
             .embed()
             .setColor(0x7289da)
             .setTitle('Information')
-            .setDescription(`  •  Current Prefix: \`${message.guild.prefix}\`\n  •  **${this.client.commandHandler.modules.size}** commands loaded with **${this.client.commandHandler.aliases.size}** aliases\n  •  Invite me to your server [here](https://discord.com/oauth2/authorize?client_id=${this.client.id}&scope=bot)`);
+            .setDescription(`  •  ${lines.join('\n  •  ')}`);
         
         return message.channel.send(embed);
     }
