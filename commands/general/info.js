@@ -14,7 +14,7 @@ class InfoCommand extends Command {
             `Command Aliases: \`${this.client.commandHandler.aliases.size}\``,
             `Guilds: \`${this.client.guilds.cache.size}\``,
             `Users: \`${this.client.guilds.cache.reduce((c, v) => c + v.memberCount, 0)}\``,
-            `Server Invite: [Link](https://discord.com/oauth2/authorize?client_id=${this.client.id}&scope=bot)`
+            `Server Invite: [Link](https://discord.com/oauth2/authorize?client_id=${this.client.user.id}&scope=bot)`
         ]
         
         const embed = this.client.util
