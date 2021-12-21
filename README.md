@@ -1,6 +1,6 @@
 ## discord-bot-template
 
-A WIP starter template for Discord bots built on a [`@sapphiredev/framework`](https://github.com/sapphiredev/framework)
+A work-in-progress starter template for Discord bots built on [`@sapphiredev/framework`](https://github.com/sapphiredev/framework)
 
 ## Database
 
@@ -14,7 +14,10 @@ _TODO_
 
 ## Default Commands
 
-_TODO_
+> **NOTE:** These are all slash commands
+
+-   ping
+-   eval
 
 ## Gallery
 
