@@ -23,6 +23,8 @@
         "discord-api-types": "^0.25.2",
         "discord.js": "^13.3.1",
         "dotenv": "^10.0.0",
-        "envalid": "^7.2.2"
+        "envalid": "^7.2.2",
+        "node-fetch": "^2.6.6",
+        "paster.js": "^1.0.0"
     }
 }

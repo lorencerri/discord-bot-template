@@ -1,16 +1,15 @@
 const { MessageEmbed } = require('discord.js');
-const { Command } = require('@sapphire/framework');
+const { Command, RegisterBehavior } = require('@sapphire/framework');
 
 class PingCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
             name: 'ping',
-            aliases: ['pong'],
             description: 'Returns the ping and latency for the bot',
             chatInputCommand: {
                 register: true,
-                behaviorWhenNotIdentical: 'OVERWRITE',
+                behaviorWhenNotIdentical: RegisterBehavior.Overwrite,
                 guildIds: ['343572980351107077'],
                 idHints: ['922718648500617228']
             }
@@ -20,8 +19,7 @@ class PingCommand extends Command {
     async chatInputRun(interaction) {
         const embed = new MessageEmbed()
             .setColor(0xfee75c)
-            .setTitle('Ping?')
-            .setDescription('Please wait...');
+            .setDescription('**Ping?** Please wait...');
 
         const message = await interaction.reply({
             embeds: [embed],
@@ -33,8 +31,7 @@ class PingCommand extends Command {
 
         embed
             .setColor(0x57f287)
-            .setTitle('Pong!')
-            .setDescription(`Ping: ${ping}ms\nLatency: ${latency}ms`);
+            .setDescription(`⏱️ Ping: ${ping}ms\n⌛ Latency: ${latency}ms`);
 
         await interaction.editReply({ embeds: [embed] });
     }
