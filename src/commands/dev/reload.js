@@ -1,6 +1,7 @@
 const { Command, RegisterBehavior } = require('@sapphire/framework');
+const { Stopwatch } = require('@sapphire/stopwatch');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { Collection } = require('discord.js');
+const { Collection, MessageEmbed } = require('discord.js');
 
 class ReloadCommand extends Command {
     constructor(context, options) {
@@ -15,6 +16,22 @@ class ReloadCommand extends Command {
     async chatInputRun(interaction) {
         const type = interaction.options.getSubcommand(true);
         const name = interaction.options.getString('name');
+        const timer = new Stopwatch().stop();
+
+        const embed = new MessageEmbed()
+            .setColor(0xfee75c)
+            .setDescription(
+                `Reloading ${
+                    type !== 'all'
+                        ? `**\`${type}: ${name}\`**`
+                        : 'all pieces and stores'
+                }, please wait...`
+            );
+
+        await interaction.reply({
+            embeds: [embed],
+            fetchReply: true
+        });
 
         switch (type) {
             case 'piece':
@@ -22,19 +39,32 @@ class ReloadCommand extends Command {
                     ...this.container.stores.values()
                 );
                 const piece = pieces.get(name);
+                timer.start();
                 await piece.reload();
                 break;
             case 'store':
                 const store = this.container.stores.get(name);
+                timer.start();
                 await store.loadAll();
                 break;
             default:
+                timer.start();
                 await Promise.all(
                     this.container.stores.map(store => store.loadAll())
                 );
         }
 
-        interaction.reply('Reloaded!');
+        embed
+            .setDescription(
+                `Successfully reloaded ${
+                    type !== 'all'
+                        ? `**\`${type}: ${name}\`**`
+                        : 'all pieces and stores'
+                } in **\`${timer.stop().toString()}\`**`
+            )
+            .setColor(0x57f287);
+
+        await interaction.editReply({ embeds: [embed] });
     }
 
     autocompleteRun(interaction) {
@@ -60,7 +90,6 @@ class ReloadCommand extends Command {
         );
     }
 
-    // TODO: Verify this is working properly
     registerApplicationCommands(registry) {
         const command = new SlashCommandBuilder()
             .setName('reload')
