@@ -124,7 +124,7 @@ class ReloadCommand extends Command {
 
         registry.registerChatInputCommand(command, {
             behaviorWhenNotIdentical: RegisterBehavior.Overwrite,
-            guildIds: ['608178003393904650']
+            guildIds: [process.env.GUILD_ID]
         });
     }
 }

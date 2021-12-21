@@ -11,7 +11,7 @@ class InfoCommand extends Command {
             chatInputCommand: {
                 register: true,
                 behaviorWhenNotIdentical: RegisterBehavior.Overwrite,
-                guildIds: ['343572980351107077']
+                guildIds: [process.env.GUILD_ID]
             }
         });
     }

@@ -6,6 +6,9 @@ const env = cleanEnv(process.env, {
     }),
     OWNER_ID: str({
         desc: "The ID of the bot's owner (used for eval & reload)"
+    }),
+    GUILD_ID: str({
+        desc: 'The ID of the guild to use for development (slash commands are updated instantly for this guild)'
     })
 });
 
