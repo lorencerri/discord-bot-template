@@ -18,7 +18,10 @@ _TODO_
 
 -   ping
 -   eval
+-   reload
 
 ## Gallery
 
 ![Terminal](https://go.plexidev.org/uL0Ud)
+
+![Reload w/ Autocomplete](https://go.plexidev.org/u6xzo)
