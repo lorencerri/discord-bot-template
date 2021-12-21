@@ -1,6 +1,6 @@
 ## discord-bot-template
 
-A WIP starter template for Discord bots built on a [`@sapphiredev/framework`](https://github.com/sapphiredev/framework).
+A WIP starter template for Discord bots built on a [`@sapphiredev/framework`](https://github.com/sapphiredev/framework)
 
 ## Database
 
@@ -15,3 +15,7 @@ _TODO_
 ## Default Commands
 
 _TODO_
+
+## Gallery
+
+![Terminal](https://go.plexidev.org/uL0Ud)
