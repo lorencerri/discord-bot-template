@@ -1,11 +1,10 @@
 {
     "name": "discord-bot-template",
-    "version": "v2.0.0",
-    "description": "Guardian, a purpose built anti-nuke Discord bot.",
-    "main": "index.js",
+    "version": "1.0.0",
+    "description": "A template for creating discord bots",
+    "main": "src/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
@@ -18,11 +17,12 @@
     },
     "homepage": "https://github.com/plexidev/discord-bot-template#readme",
     "dependencies": {
-        "discord-akairo": "8.1.0",
-        "discord.js": "12.3.1",
-        "dotenv": "8.2.0",
-        "node-fetch": "2.6.1",
-        "path": "0.12.7",
-        "quick.db": "7.1.2"
+        "@sapphire/framework": "^2.3.0-pr-293.dddddda.0",
+        "@sapphire/plugin-logger": "^2.1.1",
+        "colorette": "^2.0.16",
+        "discord-api-types": "^0.25.2",
+        "discord.js": "^13.3.1",
+        "dotenv": "^10.0.0",
+        "envalid": "^7.2.2"
     }
 }
