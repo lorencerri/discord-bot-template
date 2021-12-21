@@ -1,4 +1,3 @@
-const { MessageEmbed } = require('discord.js');
 const { Command, RegisterBehavior } = require('@sapphire/framework');
 const paster = require('paster.js');
 
