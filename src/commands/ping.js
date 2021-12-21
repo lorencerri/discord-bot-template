@@ -7,7 +7,13 @@ class PingCommand extends Command {
             ...options,
             name: 'ping',
             aliases: ['pong'],
-            description: 'Returns the ping and latency for the bot'
+            description: 'Returns the ping and latency for the bot',
+            chatInputCommand: {
+                register: true,
+                behaviorWhenNotIdentical: 'OVERWRITE',
+                guildIds: ['343572980351107077'],
+                idHints: ['922718648500617228']
+            }
         });
     }
 
