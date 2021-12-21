@@ -19,14 +19,14 @@ class ReadyEvent extends Listener {
 
         // Loaded stores
         this.container.logger.info(colors.bold(colors.green('Loaded:')));
-        let stores = [...this.container.client.stores.values()];
-        stores = stores.sort((a, b) => b.size - a.size);
-        stores = stores.map(
-            store =>
-                `${colors.blue(
-                    `\t${store.size.toString().padEnd(3, ' ')}`
-                )} ${colors.gray(store.name)}`
-        );
+        let stores = [...this.container.client.stores.values()]
+            .sort((a, b) => b.size - a.size)
+            .map(
+                store =>
+                    `${colors.blue(
+                        `\t${store.size.toString().padEnd(3, ' ')}`
+                    )} ${colors.gray(store.name)}`
+            );
         this.container.logger.info(stores.join('\n'));
     }
 }
