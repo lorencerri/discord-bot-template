@@ -9,7 +9,7 @@ _TODO_
 ## Getting Started
 
 1. Install dependencies **`npm install`**
-2. Create .env **Refer to .env.example**
+2. Create .env **`Refer to .env.example`**
 3. Run the bot **`node .`**
 
 ## Default Commands
