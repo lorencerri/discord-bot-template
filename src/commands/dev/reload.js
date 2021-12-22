@@ -92,7 +92,7 @@ class ReloadCommand extends Command {
 
     registerApplicationCommands(registry) {
         const command = new SlashCommandBuilder()
-            .setName('reload')
+            .setName(this.name)
             .setDescription(this.description)
             .addSubcommand(subcommand =>
                 subcommand
