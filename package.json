@@ -17,7 +17,7 @@
     },
     "homepage": "https://github.com/plexidev/discord-bot-template#readme",
     "dependencies": {
-        "@sapphire/framework": "^2.3.0-pr-293.67baf15.0",
+        "@sapphire/framework": "pr-293",
         "@sapphire/plugin-logger": "^2.1.1",
         "@sapphire/stopwatch": "^1.2.4",
         "colorette": "^2.0.16",
