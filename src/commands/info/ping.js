@@ -27,7 +27,7 @@ class PingCommand extends Command {
         });
 
         const ping = interaction.client.ws.ping;
-        const latency = message.createdTimestamp - Date.now();
+        const latency = Date.now() - message.createdTimestamp;
 
         embed
             .setColor(0x57f287)
