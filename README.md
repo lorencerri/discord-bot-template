@@ -1,33 +1,31 @@
-## discord-bot-template
+### discord-bot-template
 
 A basic TypeScript starter template for Discord bots built on [`@sapphiredev/framework`](https://github.com/sapphiredev/framework)
 
-## JavaScript Version
+### JavaScript Version
 
-An outdated, although somewhat functional JavaScript version of this template is available on the _`javascript`_ branch.
+An outdated, although functional JavaScript template is available on the _`javascript`_ branch. **Not recommended.**
 
-## Database
+### Database
 
 _TODO_
 
-## Getting Started
+### Getting Started
 
-1. Clone repository
-2. Install dependencies _`npm install`_
-3. Create .env `Refer to .env.example`
-4. Build the bot _`npm run build`_
-5. Run the bot _`npm run start`_
+```bash
+git clone https://github.com/lorencerri/discord-bot-template.git # Clone the repo
+cd discord-bot-template # Enter the directory
+copy .env.example .env # Copy the .env.example file to .env
+nano .env # Fill in the .env file
+npm install # Install dependencies
+npm run build # Build the bot
+npm run start # Start the bot
+```
 
-## Default Commands
+### Default Commands
 
 > **NOTE:** These are all slash commands
 
 -   eval
 -   reload (**NOTE:** Reloading slash commands is typically buggy)
 -   ping
-
-## Gallery
-
-![Terminal](https://go.plexidev.org/uL0Ud)
-
-![Reload w/ Autocomplete](https://go.plexidev.org/u6xzo)
