@@ -1,17 +1,17 @@
 {
-	"name": "discord-guardian",
+	"name": "discord-bot-template",
 	"version": "2.0.0",
 	"main": "dist/index.js",
 	"author": "lorencerri",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/plexidev/discord-guardian.git"
+		"url": "git+https://github.com/lorencerri/discord-bot-template.git"
 	},
 	"bugs": {
-		"url": "https://github.com/plexidev/discord-guardian/issues"
+		"url": "https://github.com/lorencerri/discord-bot-template/issues"
 	},
-	"homepage": "https://github.com/plexidev/discord-guardian#readme",
+	"homepage": "https://github.com/lorencerri/discord-bot-template#readme",
 	"dependencies": {
 		"@discordjs/builders": "^0.15.0",
 		"@discordjs/collection": "^0.4.0",
