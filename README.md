@@ -15,7 +15,7 @@ _TODO_
 ```bash
 git clone https://github.com/lorencerri/discord-bot-template.git # Clone the repo
 cd discord-bot-template # Enter the directory
-copy .env.example .env # Copy the .env.example file to .env
+copy .env.example ./src/.env # Copy the .env.example file into the src folder and rename it .env
 nano .env # Fill in the .env file
 npm install # Install dependencies
 npm run build # Build the bot
