@@ -9,9 +9,6 @@ import { Stopwatch } from "@sapphire/stopwatch";
 	name: 'reload',
 	description: 'Reloads a piece or store',
 	preconditions: ['OwnerOnly'],
-	chatInputCommand: {
-		register: true,
-	},
 })
 export class ReloadCommand extends Command {
 	async chatInputRun(interaction: Command.ChatInputInteraction) {

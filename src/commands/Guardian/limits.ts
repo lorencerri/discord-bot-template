@@ -7,9 +7,6 @@ import { Command, RegisterBehavior } from '@sapphire/framework';
 	name: 'limits',
 	description: 'View or set interaction limits for the server',
 	preconditions: ['OwnerOnly'],
-	chatInputCommand: {
-		register: true,
-	},
 })
 export class LimitsCommand extends Command {
 	async chatInputRun(_interaction: Command.ChatInputInteraction) {

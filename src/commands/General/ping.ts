@@ -6,18 +6,14 @@ import {
 } from '@sapphire/framework';
 import { isMessageInstance } from '@sapphire/discord.js-utilities';
 import { ApplicationCommandType } from 'discord-api-types/v10';
-import { MessageEmbed } from 'discord.js';
+import { Message, MessageEmbed } from 'discord.js';
 
 @ApplyOptions<CommandOptions>({
 	name: 'ping',
 	description: 'Ping bot to see if it is alive.',
-	chatInputCommand: {
-		register: true,
-		idHints: ['984583457768353835']
-	},
 })
 export class PingCommand extends Command {
-	async ping(interaction: Command.ChatInputInteraction | Command.ContextMenuInteraction) {
+	async ping(interaction: Command.ChatInputInteraction | Command.ContextMenuInteraction): Promise<any> {
 
 		const embed = new MessageEmbed()
 			.setTitle("Ping?")
@@ -25,6 +21,7 @@ export class PingCommand extends Command {
 
 		const msg = await interaction.reply({ embeds: [embed], ephemeral: true, fetchReply: true });
 
+		if (!(msg instanceof Message)) throw new Error("The returned message is not a Message instance.");
 		if (!isMessageInstance(msg)) throw new Error("Failed to send message.");
 
 		const diff = msg.createdTimestamp - interaction.createdTimestamp;

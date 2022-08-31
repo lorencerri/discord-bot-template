@@ -9,9 +9,6 @@ import { inspect } from 'util';
 	aliases: ['ev'],
 	description: 'Evaluates any JavaScript code',
 	preconditions: ['OwnerOnly'],
-	chatInputCommand: {
-		register: true,
-	},
 })
 export class EvalCommand extends Command {
 	async clean(token = '', text = '') {

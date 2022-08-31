@@ -3,7 +3,7 @@ import { Listener } from '@sapphire/framework';
 import { MessageEmbed } from 'discord.js';
 
 export class ChatInputCommandError extends Listener<typeof Events.ChatInputCommandError> {
-	public async run(error: Error, { interaction }: ChatInputCommandErrorPayload) {
+	public async run(error: Error, { interaction }: ChatInputCommandErrorPayload): Promise<any> {
 		const embed = new MessageEmbed()
 			.setColor(0x6d3737)
 			.setTitle('Chat Input Command Error')
